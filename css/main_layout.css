@@ -193,6 +193,7 @@ table{border-collapse: collapse;border-spacing: 0;}
 			.fishka,.gameboard tr td {
 				height: 80px;
 				width: 80px;
+				overflow: hidden;
 			}
 			.gameboard tr td:hover{
 				opacity: 0.7; 

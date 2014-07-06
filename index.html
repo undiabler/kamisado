@@ -112,7 +112,7 @@ var startp=undefined;
 var moving=false;
 
 $('.gameboard tr td').mousedown(function(){
-	if (moving==true) {
+	if (moving==true && $(this).children('.fishka').length==0) {
 		window.game.move(startp,$(this).data('pos'));
 		moving=false;
 	} else {

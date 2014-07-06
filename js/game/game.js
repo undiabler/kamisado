@@ -101,21 +101,23 @@ function movefishka(x1,y1,x2,y2){
 
 	//console.log(x2+":"+y2);
 
-	var newpos={x:fishkamove.offset().left-$('.gamefolder').offset().left,y:fishkamove.offset().top-$('.gamefolder').offset().top};
+	var newpos={x:fishkamove.offset().left,y:fishkamove.offset().top};
+		var anim=$('.fishka').width();
+		
+		var moveme_c1 = fishkamove.detach(); moveme_c1.appendTo($('body'));
+
 		fishkamove.css('position','absolute');
 		fishkamove.css('z-index','5');
 		fishkamove.css('left',newpos.x);
 		fishkamove.css('top',newpos.y);
 		var rxy=8*(7-1*y2) + (1*x2);
 
-		var anim=$('.fishka').width();
 		// console.log(result[0],result[1]);
 	fishkamove.animate({
     left: newpos.x-result[0]*anim,
     top: newpos.y+result[1]*anim,
   }, 500, function() {
-    	var moveme_c = fishkamove.detach();
-  		moveme_c.appendTo($('.gameboard tr td').eq(rxy));
+    	var moveme_c = fishkamove.detach(); moveme_c.appendTo($('.gameboard tr td').eq(rxy));
   		moveme_c.css('position','static');
 		moveme_c.css('left',0);
 		moveme_c.css('top',0);
