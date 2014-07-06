@@ -8,7 +8,10 @@ function colormove_next(id,who){
 	var colors=['orange','red','green','pink','yellow','blue','lightblue','brown'];
 	$('#colorname').html(color_names[id-1]);
 	$('#colormove').css('background-color',colors[id-1]);
-	$('#nextmove').html(who?'Ваш ход':'Ход противника');
+	var movewho=who?'Ваш ход':'Ход противника';
+	$('#nextmove').html(movewho);
+	document.title='['+movewho+'] '+$('meta[name=title]').attr('content');
+	$('#movemusic')[0].play();
 }
 
 function winorlose(win,twin){
@@ -21,6 +24,7 @@ function winorlose(win,twin){
 	$('#colorname').html('');
 	$('#colormove').css('background-color','');
 	$('#nextmove').html('');
+	document.title=$('meta[name=title]').attr('content');
 }
 
 function SimpleGame(){
