@@ -95,7 +95,7 @@ function movefishka(x1,y1,x2,y2){
 	var fishkamove=$('.gameboard tr td').eq( 8*(7-1*y1)+1*x1 ).children('.fishka').eq(0);
 	if (fishkamove.length==0) return alert('в поле нет фишки!');
 
-	console.log(x2+":"+y2);
+	//console.log(x2+":"+y2);
 
 	var newpos={x:fishkamove.offset().left-$('.gamefolder').offset().left,y:fishkamove.offset().top-$('.gamefolder').offset().top};
 		fishkamove.css('position','absolute');
