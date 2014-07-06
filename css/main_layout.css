@@ -1,0 +1,218 @@
+/***
+   http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+***/
+html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,b, u, i, center, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,time, mark, audio, video {margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}
+a{text-decoration:none;}h1, h2, h3, h4, h5, h6 {font-weight: normal;}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, input, textarea, button {display: block;}
+body{line-height: 1;}ol,ul{list-style: none;}blockquote,q{quotes: none;}
+blockquote:before, blockquote:after,q:before, q:after{content: '';content: none;}
+table{border-collapse: collapse;border-spacing: 0;}
+
+@font-face {
+    font-family: OpenSans;
+    src: url(fonts/OpenSans-light.ttf);
+}
+
+@font-face{     
+	font-family: OpenSans-Regular;
+    src: url(fonts/OpenSans-Regular.ttf);
+   }
+			body {
+				background-color: #f1f1f1;
+				margin: 0;
+			}
+			.backgroung{
+				width: 1024px;
+				height: 425px;
+				margin: auto;
+			    position: absolute;
+			    left: 50%;
+			    -webkit-transform: translate(-50%);
+			    -ms-transform: translate(-50%);
+			    transform: translate(-50%);
+				background: url('fon.png') no-repeat;
+				z-index: -1;
+			}
+			body,.nsel{
+				-webkit-touch-callout: none;
+				-webkit-user-select: none;
+				-khtml-user-select: none;
+				-moz-user-select: none;
+				-ms-user-select: none;
+				user-select: none;
+			}
+			.demo{
+				border: 1px solid red;
+			}
+			header {
+				position: fixed;
+				left: 0px;
+				top: 0px;
+				margin-left: 0px;
+				margin-top: 0px;
+				height: 30px;
+				width: 100%;
+				z-index: 10;
+				background-color: #e0e0e0;
+				border-bottom: 1px solid #959595;
+			}
+			footer {
+				position: fixed;
+				left: 0px;
+				top: 100%;
+				margin-left: 0px;
+				margin-top: -30px;
+				height: 30px;
+				width: 100%;
+				z-index: 10;
+				background-color: #e0e0e0;
+				border-top: 1px solid #959595;
+			}
+			.tablehead{
+				width: 100%;font-size: 15px;
+				font-family:OpenSans;
+				color:#797979;
+			}
+			.tablehead td{width: 20%;line-height: 30px; padding: 0 10px;}
+			.tablehead a{color:#797979;text-decoration: none;}
+			.tablehead a:link{color:#797979;text-decoration: none;}
+			.text2{
+				font-size: 14px;
+				font-family:OpenSans-Regular;
+				color:#797979;
+			}
+			.text,.text-header{
+				font-size: 15px;
+				font-family:OpenSans;
+				color:#797979;
+			}
+			.text-header{
+				vertical-align:middle;
+				line-height: 30px;
+				float: left;
+				padding-right: 15px;
+			}
+			.wr {text-align: center;}
+    		.wr_cn{display: inline-block;overflow: hidden;}
+			.xc{
+				margin-left: auto;
+				margin-right: auto;
+				max-width: 797px;
+			}
+			.center{ 
+			    margin: auto;
+			    position: absolute;
+			    top: 50%; left: 50%;
+			    -webkit-transform: translate(-50%,-50%); /* Для Safari, Chrome, iOS */
+			    -moz-transform: translate(-50%,-50%); /* Для Firefox */
+			    -ms-transform: translate(-50%,-50%); /* Для IE */
+			    -o-transform: translate(-50%,-50%); /* Для Opera */
+			    transform: translate(-50%,-50%);
+			}
+			.imgc{
+				margin-top: 30px;
+				padding:20px 0 10px 0;
+				max-width: 555px;
+				margin-left: auto;
+				margin-right: auto;
+			}
+
+			.ps100{
+				width: 100%;
+			}
+			.gamefolder{
+				position: absolute;
+				margin: 0 auto;
+				margin-bottom: 60px;
+				width: 100%;
+			}
+
+			.topmenu{
+				margin-left: auto;
+				margin-right: auto;
+				max-width: 640px;
+				height: 20px;
+			}
+
+			.fl{float: left;}
+			.fr{float: right;}
+
+			.fillzone{
+				display: none;
+				margin: 0 auto;
+				position: absolute;
+				background-color: rgba(241,241,241,0.8);
+				height: 100%;
+				width: 640px;
+			}
+
+			.redbutton{
+				background-color: #cc3333;
+				padding: 30px 20px;
+				box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Параметры тени */
+				cursor: pointer;
+				min-width: 170px;
+			}
+			.redbutton:hover{background-color:#AD1010}
+
+			.playtext{
+				font-size: 20px;
+				font-family:OpenSans;
+				color:#f1f1f1;
+				vertical-align:middle;
+				text-align: center;
+				line-height: 30px;
+			}
+			.alertcenter{
+				font-size: 27px;
+				font-family:OpenSans;
+				color:#797979;
+				text-shadow: 1px 1px 10px white;
+				vertical-align:middle;
+				text-align: center;
+				width: 300px;
+			}
+			#calcusers{font-family:OpenSans-regular;}
+			.gameboard{
+				border-collapse: collapse;
+			    margin-left: auto;
+				margin-right: auto;
+			}
+			.fishka,.gameboard tr td {
+				height: 80px;
+				width: 80px;
+			}
+			.gameboard tr td:hover{
+				opacity: 0.7; 
+			}
+			@media screen and (max-width: 800px){
+				.fishka,.gameboard tr td {height: 60px;width: 60px;}
+				.fillzone,.topmenu{width: 480px;}
+			}
+			@media screen and (max-width: 600px) {
+				.fishka,.gameboard tr td {height: 40px;width: 40px;}
+				.fillzone,.topmenu{width: 320px;}
+			}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

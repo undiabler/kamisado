@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+  <title>kamisado</title>
+  <link href="css/main_layout.css" rel="stylesheet" media="all">
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.1/jquery.min.js"></script>
+  <script type="text/javascript" src="js/game/game.js"></script>
+</head>
+<body>
+<header>
+<div class="xc">
+	<table class="tablehead">
+		<tr>
+			<td><a href="/" target="_blank">Правила игры</a></td>
+			<td>О проекте</td>
+			<td></td>
+			<td></td>
+			<td><span id="calcusers">0</span> игроков онлайн</td>
+		</tr>
+	</table>
+	<!-- <div class="text-header">О проекте</div> -->
+	<!-- <div class="text-header">помощь проекту</div> -->
+</div>
+</header>
+
+<div class="backgroung"></div>
+<div class="imgc">
+	<img src="img/kamisado_logo.png" class="ps100"/>
+</div>
+<div class="gamefolder">
+  
+  <div class="fillzone center">
+  	<div id="playbutton" class="redbutton center" style="display: none;" onclick="wanttoplay()"><div class="playtext">Играть</div></div>
+  	<div id="errormessage" class="alertcenter center" style="display: none;">К сожалению в данный момент игровой сервер недоступен.</div>
+  	<div id="waitmessage" class="alertcenter center" style="display: none;"><img src="/img/loader.gif" width="30px" height="30px"><br/>Мы ищем вам партнера ;)</div>
+  </div>
+
+ <div class="topmenu">
+ 	<div id="nextcolor" class="text2 fl">Сейчас ходят: <span id="colormove">&emsp;</span> <span id="colorname">любой цвет</span></div>
+ 	<div id="nextmove" class="text2 fr"></div>
+ </div>
+ 	<table class="gameboard" cellpadding="0">
+ 		<tr><td data-pos='0:7'></td><td data-pos='1:7'></td><td data-pos='2:7'></td><td data-pos='3:7'></td><td data-pos='4:7'></td><td data-pos='5:7'></td><td data-pos='6:7'></td><td data-pos='7:7'></td></tr>
+ 		<tr><td data-pos='0:6'></td><td data-pos='1:6'></td><td data-pos='2:6'></td><td data-pos='3:6'></td><td data-pos='4:6'></td><td data-pos='5:6'></td><td data-pos='6:6'></td><td data-pos='7:6'></td></tr>
+ 		<tr><td data-pos='0:5'></td><td data-pos='1:5'></td><td data-pos='2:5'></td><td data-pos='3:5'></td><td data-pos='4:5'></td><td data-pos='5:5'></td><td data-pos='6:5'></td><td data-pos='7:5'></td></tr>
+ 		<tr><td data-pos='0:4'></td><td data-pos='1:4'></td><td data-pos='2:4'></td><td data-pos='3:4'></td><td data-pos='4:4'></td><td data-pos='5:4'></td><td data-pos='6:4'></td><td data-pos='7:4'></td></tr>
+ 		<tr><td data-pos='0:3'></td><td data-pos='1:3'></td><td data-pos='2:3'></td><td data-pos='3:3'></td><td data-pos='4:3'></td><td data-pos='5:3'></td><td data-pos='6:3'></td><td data-pos='7:3'></td></tr>
+ 		<tr><td data-pos='0:2'></td><td data-pos='1:2'></td><td data-pos='2:2'></td><td data-pos='3:2'></td><td data-pos='4:2'></td><td data-pos='5:2'></td><td data-pos='6:2'></td><td data-pos='7:2'></td></tr>
+ 		<tr><td data-pos='0:1'></td><td data-pos='1:1'></td><td data-pos='2:1'></td><td data-pos='3:1'></td><td data-pos='4:1'></td><td data-pos='5:1'></td><td data-pos='6:1'></td><td data-pos='7:1'></td></tr>
+ 		<tr><td data-pos='0:0'></td><td data-pos='1:0'></td><td data-pos='2:0'></td><td data-pos='3:0'></td><td data-pos='4:0'></td><td data-pos='5:0'></td><td data-pos='6:0'></td><td data-pos='7:0'></td></tr>
+ 	</table>
+	
+</div>
+
+
+<footer>
+<div class="xc">
+	<div class="text-header fl">&copy; kamisado 2014</div>
+	<div class="text-header fr">Design & Develop: Undiabler</div>
+</div>
+</footer>
+
+
+
+<script type="text/javascript">
+	$(window).resize(function(){
+		// var nw=$('.gameboard').width();
+		// var maxval=$('.gamefolder').width();
+		// $('.topmenu').css('width',nw);
+		// $('.topmenu').css('margin-left',(maxval-nw)/2);
+});
+// вызов функции:
+
+
+function wanttoplay(){
+	window.game.send(JSON.stringify({code:1}));
+	$('#playbutton').hide();
+  	$('#errormessage').hide();
+  	$('#waitmessage').show();
+}
+
+$(function(){
+	new SimpleGame();
+	$('.gameboard tr td').each(function(e){
+	var y=Math.floor(e/8);
+	var x=e-(y*8);
+	$(this).css('background','url(\'img/fields.png\') no-repeat -'+x*80+'px -'+y*80+'px');
+});
+
+});
+
+
+var startp=undefined;
+var moving=false;
+
+$('.gameboard tr td').mousedown(function(){
+	if (moving==true) {
+		window.game.move(startp,$(this).data('pos'));
+		moving=false;
+	} else {
+		startp=$(this).data('pos');
+		moving=true;
+	}	
+});
+
+</script>
+</body>
+</html>

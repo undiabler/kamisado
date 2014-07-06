@@ -1,0 +1,203 @@
+@font-face {
+    font-family: OpenSans;
+    src: url(fonts/OpenSans-light.ttf);
+}
+
+@font-face{     
+	font-family: OpenSans-Regular;
+    src: url(fonts/OpenSans-Regular.ttf);
+   }
+			body {
+				font-family: Monospace;
+				background-color: #000;
+				xheight: 1000px;
+				xbackground: url("img.jpg") 0px 0px no-repeat; 
+			}
+			.demoborder{
+				border: 1px solid red;
+			}
+			.topblock{
+				position: fixed;
+				left: 0px;
+				top: 0px;
+				margin-left: 0px;
+				margin-top: 0px;
+				height: 90px;
+				width: 100%;
+				z-index: 1;
+				background: rgb(0, 0, 0);
+    			background: rgba(0, 0, 0, .87);
+			}
+			.footerblock{
+				position: fixed;
+				left: 0px;
+				top: 100%;
+				margin-left: 0px;
+				margin-top: -70px;
+				height: 70px;
+				width: 100%;
+				background: rgb(0, 0, 0);
+    			background: rgba(0, 0, 0, .87);
+			}
+			.centerme,.container{
+				max-width: 1024px;
+				height: 100%;
+				margin-left: auto;
+				margin-right: auto;
+				margin-top: 0px;
+				margin-bottom: 0px;
+				position: relative;
+
+			}
+			.line_big_up{
+				width: 100%;
+				height: 5px;
+				left: 0px;
+				top: 0px;
+				margin-left: 0px;
+				margin-top: 0px;
+				margin-bottom: -5px;
+				background-color: #9b86d5;
+				background: linear-gradient(to right, #9b86d5, #B6519F);
+				z-index: 1;
+			}
+			.line_big_down{
+				width: 100%;
+				height: 5px;
+				left: 0px;
+				top: 0px;
+				margin-left: 0px;
+				margin-top: -5px;
+				background-color: #9b86d5;
+				background: linear-gradient(to right, #9b86d5, #B6519F);
+				z-index: 1;
+			}
+			.line_small_down{
+				width: 1024px;
+				height: 1px;
+				top: 0px;
+				background-color: #9b86d5;
+				background: linear-gradient(to right, #9b86d5, #B6519F);
+				z-index: 1;
+				margin-left: auto;
+				margin-right: auto;
+				margin-top: -1px;
+			}
+			.line_small_up{
+				width: 1024px;
+				height: 1px;
+				top: 0px;
+				background-color: #9b86d5;
+				background: linear-gradient(to right, #9b86d5, #B6519F);
+				z-index: 1;
+				margin-left: auto;
+				margin-right: auto;
+			}
+			.stefanruslan{
+				font-size: 23px;
+				font-family:OpenSans;
+				color:#9b86d5;
+				top: 0px;
+				padding-top: 20px;
+				margin-bottom: 0px;
+				padding-left: 20px;
+				position: relative;
+			}
+			.toptext{
+				font-size:13px;
+				font-family: OpenSans-Regular;
+				color:white;
+			}
+
+			.downtext1,.downtext2{
+				font-size:14px;
+				font-family: OpenSans-Regular;
+				color:white;
+				padding-top: 25px;
+				padding-left: 20px;
+				float:left; 
+			}
+			.downtext2{
+				padding-right: 20px;
+				float:right; 
+			}
+			.downtext2 span{
+				color: #9F4080;
+			}
+			.leftblock {
+				float:left;
+				height: 100%;
+				padding-left: 20px;
+			}
+			.leftblock table{
+				padding-top: 10px;
+			}
+			.leftblock td{
+				font-size:13px;
+				font-family: OpenSans-Regular;
+				color:white;
+				padding-top: 20px;
+				padding-right: 75px;
+				line-height: 9px;
+			}
+			.leftblock td span{
+				color: #9F4080;
+			}
+			.rightblock {
+				position: relative;
+				float:right;
+				height: 100%;
+				
+			}
+			.rightblock div:nth-child(1){
+				padding-top:30px;
+			}
+			.rightblock div {
+				text-align: right;
+				padding-bottom: 20px;
+				padding-right: 20px;
+				padding-left: 20px;
+				line-height: 9px;
+			}
+			.imgblock_main{
+				width: 22.8971963%;
+				height: 420px;
+				position: relative;
+				padding-top: 15px;
+				padding-bottom: 15px;
+				padding-right: 15px;
+				padding-left: 15px;
+
+			}
+
+			.imgblock_main div:nth-child(1) {
+				height: 300px;
+				width: 100%;
+				overflow: hidden;
+				position: relative;
+			}
+			.imgblock_main div:nth-child(2) {
+				position: relative;
+				display: table-cell;
+				vertical-align:middle;
+				text-align:center;
+				font-size:20px;
+				font-family: OpenSans-Regular;
+				color:#6B6B6B;
+				background-color:#fff;
+				height: 120px;
+				width: 245px;
+			}
+			.imgc{
+				height: 100%;
+				margin: auto;
+			    position: absolute;
+			    top: 50%; left: 50%;
+			    -webkit-transform: translate(-50%,-50%);
+			    -ms-transform: translate(-50%,-50%);
+			    transform: translate(-50%,-50%);
+			}
+			.container{
+				margin-top: 90px;
+				margin-bottom: 70px;
+			}
