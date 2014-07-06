@@ -83,9 +83,11 @@ table{border-collapse: collapse;border-spacing: 0;}
 				color:#797979;
 			}
 			.tablefoot td{width: 30%; text-align: center; padding: 0 10px;}
-			.tablehead td{width: 20%;line-height: 30px; padding: 0 10px;}
-			.tablehead a{color:#797979;text-decoration: none;}
-			.tablehead a:link{color:#797979;text-decoration: none;}
+			.tablehead td{width: 30%;line-height: 30px; padding: 0 10px;}
+			.tablefoot td:last-child,.tablehead td:last-child{text-align: right;}
+			.tablefoot td:first-child,.tablehead td:first-child{text-align: left;}
+			.tablefoot a,.tablehead a{color:#797979;text-decoration: none;}
+			.tablefoot a:link,.tablehead a:link{color:#797979;text-decoration: none;}
 			.text2{
 				font-size: 14px;
 				font-family:OpenSans-Regular;
