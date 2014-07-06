@@ -77,11 +77,12 @@ table{border-collapse: collapse;border-spacing: 0;}
 				background-color: #e0e0e0;
 				border-top: 1px solid #959595;
 			}
-			.tablehead{
+			.tablehead,.tablefoot{
 				width: 100%;font-size: 15px;
 				font-family:OpenSans;
 				color:#797979;
 			}
+			.tablefoot td{width: 30%; text-align: center; padding: 0 10px;}
 			.tablehead td{width: 20%;line-height: 30px; padding: 0 10px;}
 			.tablehead a{color:#797979;text-decoration: none;}
 			.tablehead a:link{color:#797979;text-decoration: none;}
