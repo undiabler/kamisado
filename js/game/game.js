@@ -34,7 +34,7 @@ function SimpleGame(){
 			
 		}
 
-		this.socket = new WebSocket("ws://localhost:8081");
+		this.socket = new WebSocket("ws://148.251.19.197:7878");
 
 		this.socket.onmessage = function(event) {
 		  var data = JSON.parse(event.data);

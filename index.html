@@ -3,32 +3,32 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
-  <title>kamisado</title>
+  <title>Камисадо - логическая, настольная игра в жанре стратегии.</title>
   <link href="css/main_layout.css" rel="stylesheet" media="all">
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.1/jquery.min.js"></script>
   <script type="text/javascript" src="js/game/game.js"></script>
 </head>
 <body>
 <header>
-<div class="xc">
-	<table class="tablehead">
-		<tr>
-			<td><a href="/" target="_blank">Правила игры</a></td>
-			<td>О проекте</td>
-			<td></td>
-			<td></td>
-			<td><span id="calcusers">0</span> игроков онлайн</td>
-		</tr>
-	</table>
-	<!-- <div class="text-header">О проекте</div> -->
-	<!-- <div class="text-header">помощь проекту</div> -->
-</div>
+	<div class="xc">
+		<table class="tablehead">
+			<tr>
+				<td><a href="/" target="_blank">Правила игры</a></td>
+				<td>О проекте</td>
+				<td></td>
+				<td></td>
+				<td><span id="calcusers">0</span> игроков онлайн</td>
+			</tr>
+		</table>
+	</div>
 </header>
 
-<div class="backgroung"></div>
-<div class="imgc">
-	<img src="img/kamisado_logo.png" class="ps100"/>
-</div>
+	<div class="backgroung"></div>
+
+	<div class="imgc">
+		<img src="img/kamisado_logo.png" class="ps100"/>
+	</div>
+
 <div class="gamefolder">
   
   <div class="fillzone center">
@@ -65,14 +65,6 @@
 
 
 <script type="text/javascript">
-	$(window).resize(function(){
-		// var nw=$('.gameboard').width();
-		// var maxval=$('.gamefolder').width();
-		// $('.topmenu').css('width',nw);
-		// $('.topmenu').css('margin-left',(maxval-nw)/2);
-});
-// вызов функции:
-
 
 function wanttoplay(){
 	window.game.send(JSON.stringify({code:1}));
@@ -84,13 +76,11 @@ function wanttoplay(){
 $(function(){
 	new SimpleGame();
 	$('.gameboard tr td').each(function(e){
-	var y=Math.floor(e/8);
-	var x=e-(y*8);
-	$(this).css('background','url(\'img/fields.png\') no-repeat -'+x*80+'px -'+y*80+'px');
+		var y=Math.floor(e/8);
+		var x=e-(y*8);
+		$(this).css('background','url(\'img/fields.png\') no-repeat -'+x*80+'px -'+y*80+'px');
+	});
 });
-
-});
-
 
 var startp=undefined;
 var moving=false;
@@ -104,6 +94,16 @@ $('.gameboard tr td').mousedown(function(){
 		moving=true;
 	}	
 });
+
+</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-52581312-1', 'auto');
+  ga('send', 'pageview');
 
 </script>
 </body>
